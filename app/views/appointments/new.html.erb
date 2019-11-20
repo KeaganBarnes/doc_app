@@ -1,0 +1,19 @@
+<h1> New Appointment </h1>
+<%= form_with(model: @course, local: true, class: "ui form" ) do |f| %>
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.time_select :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reason %>
+    <%= f.text_field :reason, placeholder: "What is the reason for your desired visit?" %>
+  </div>
+ 
+ <%= f.submit nil, class: "ui green button inverted" %>
+  <% end %>

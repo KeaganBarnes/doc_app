@@ -1,0 +1,12 @@
+<%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome, <%= current_user.first_name </h2>
+<%= link_to 'New Doctor', new_doctor_path %>
+<hr />
+<%= link_to "Add Doctor", new_doctor_path %>
+<ul>
+  <% @doctors.each do |doctor| %>
+    <li>
+      <%= doctor.name %> - <%= doctor.specialty %>
+    </li>
+  <% end %>
+</ul>
